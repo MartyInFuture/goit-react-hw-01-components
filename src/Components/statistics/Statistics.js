@@ -1,12 +1,13 @@
 import Stats from './stats/Stats';
 import PropTypes from 'prop-types';
+import { StatsStyled } from './StatsStyled';
 
 const Statistics = ({ title, statisticalData }) => {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
+    <StatsStyled>
+      <h2 className="title">{title ? title : ''}</h2>
       <Stats statisticalData={statisticalData} />
-    </section>
+    </StatsStyled>
   );
 };
 

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import Transaction from './transaction/Transaction';
+import { TransactionBodyStyled } from './TransactionBodyStyled';
 
 const TransactionsBody = ({ transactions }) => {
   return (
-    <tbody>
+    <TransactionBodyStyled>
       {transactions.map((transaction) => (
         <Transaction
           key={transaction.id}
@@ -12,7 +13,7 @@ const TransactionsBody = ({ transactions }) => {
           currency={transaction.currency}
         />
       ))}
-    </tbody>
+    </TransactionBodyStyled>
   );
 };
 

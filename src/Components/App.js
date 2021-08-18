@@ -13,6 +13,7 @@ const App = () => {
     <main>
       <Profile user={user} />
       <Statistics title="Upload stats" statisticalData={statisticalData} />
+      <Statistics statisticalData={statisticalData} />
       <FriendsList friends={friends} />
       <TransactionsHistory transactions={transactions} />
     </main>

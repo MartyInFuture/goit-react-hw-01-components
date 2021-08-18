@@ -1,10 +1,12 @@
+import { TransactionStyled } from './TransactionStyled';
+
 const Transaction = ({ type, amount, currency }) => {
   return (
-    <tr>
+    <TransactionStyled>
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
-    </tr>
+    </TransactionStyled>
   );
 };
 

@@ -1,9 +1,10 @@
 import Stats from './stats/Stats';
 import PropTypes from 'prop-types';
+import { ProfileStyled } from './ProfileStyled';
 
 const Profile = ({ user }) => {
   return (
-    <div className="profile">
+    <ProfileStyled>
       <div className="description">
         <img src={user.avatar} alt={user.name} className="avatar" />
         <p className="name">{user.name}</p>
@@ -11,7 +12,7 @@ const Profile = ({ user }) => {
         <p className="location">{user.location}</p>
       </div>
       <Stats stats={user.stats} />
-    </div>
+    </ProfileStyled>
   );
 };
 
