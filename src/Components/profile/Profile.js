@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { ProfileStyled } from './ProfileStyled';
 
 const Profile = ({ user }) => {
+  const { avatar, name, tag, location } = user;
   return (
     <ProfileStyled>
       <div className="description">
-        <img src={user.avatar} alt={user.name} className="avatar" />
-        <p className="name">{user.name}</p>
-        <p className="tag">@{user.tag}</p>
-        <p className="location">{user.location}</p>
+        <img src={avatar} alt={name} className="avatar" />
+        <p className="name">{name}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
       <Stats stats={user.stats} />
     </ProfileStyled>

@@ -9,16 +9,17 @@ const Stats = ({ statisticalData }) => {
     }
     return color;
   };
+
   return (
     <StatsStyled>
-      {statisticalData.map((el) => (
+      {statisticalData.map(({ id, label, percentage }) => (
         <li
-          key={el.id}
+          key={id}
           style={{ backgroundColor: `rgb(${randomColor()})` }}
           className="item"
         >
-          <span className="label">{el.label}</span>
-          <span className="percentage">{el.percentage}</span>
+          <span className="label">{label}</span>
+          <span className="percentage">{percentage}</span>
         </li>
       ))}
     </StatsStyled>

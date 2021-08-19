@@ -5,7 +5,7 @@ import { StatsStyled } from './StatsStyled';
 const Statistics = ({ title, statisticalData }) => {
   return (
     <StatsStyled>
-      <h2 className="title">{title ? title : ''}</h2>
+      <h2 className="title">{title || ''}</h2>
       <Stats statisticalData={statisticalData} />
     </StatsStyled>
   );
